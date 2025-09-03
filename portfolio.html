@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramveer Singh | AI/ML Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .wave {
+            animation: wave 2.5s infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-xl font-bold gradient-text">AI Explorer</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-300 transition">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-300 transition">About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-300 transition">Skills</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-indigo-300 transition">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-300 transition">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-300 transition">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-300 transition">Skills</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-indigo-300 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Paramveer Singh</span> <span class="wave">👋</span></h1>
+                    <h2 class="text-xl md:text-2xl mb-6">B.Tech CSE Student specializing in <span class="gradient-text">Data Science</span></h2>
+                    <p class="text-gray-300 mb-8 max-w-lg">Passionate about Artificial Intelligence, Machine Learning, and Deep Learning. Exploring the fascinating world of data to build intelligent systems.</p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-medium hover:opacity-90 transition">Get In Touch</a>
+                        <a href="#about" class="px-6 py-3 border border-indigo-500 rounded-full font-medium hover:bg-indigo-900/30 transition">Learn More</a>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-left">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full opacity-20 blur-xl"></div>
+                        <div class="relative w-full h-full flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Paramveer Singh" class="w-full h-full object-cover rounded-full border-4 border-indigo-500/30 floating">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto">Get to know more about my academic journey and professional aspirations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-300 mb-6">I'm Paramveer Singh, a passionate Computer Science Engineering student specializing in Data Science. My journey in technology began with curiosity about how machines can learn and make decisions, which evolved into a deep interest in Artificial Intelligence and Machine Learning.</p>
+                    <p class="text-gray-300 mb-6">Currently pursuing my B.Tech degree, I'm constantly exploring new concepts in data science and AI to expand my knowledge and skills. I believe in the transformative power of data-driven solutions to solve real-world problems.</p>
+                    <p class="text-gray-300">When I'm not studying or coding, you can find me reading about the latest advancements in AI or participating in tech communities to learn from and contribute to the growing field of data science.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="glass-card rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6">Education</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-medium text-indigo-300">Bachelor of Technology in Computer Science</h4>
+                                <p class="text-gray-400">Specialization in Data Science</p>
+                                <p class="text-sm text-gray-500">2021 - Present</p>
+                            </div>
+                            <div class="border-t border-gray-800 pt-6">
+                                <h4 class="text-lg font-medium text-indigo-300">Relevant Coursework</h4>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Machine Learning</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Deep Learning</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Data Structures</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Algorithms</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Statistics</span>
+                                    <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Data Visualization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto">Technologies and tools I'm familiar with and currently learning</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Programming Languages -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="code" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Python</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Java</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">C++</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="database" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Data Science</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Pandas</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">NumPy</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Matplotlib</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Seaborn</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="cpu" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">ML/DL</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Scikit-learn</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">TensorFlow</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Keras</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">PyTorch</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="tool" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Jupyter</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">VS Code</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Git</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">Tableau</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="globe" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Web Dev</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">HTML</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">CSS</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">JavaScript</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">React</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="glass-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-3">
+                            <i data-feather="hard-drive" class="text-indigo-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">MySQL</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-800 rounded-full text-sm">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <div class="glass-card rounded-xl p-12 max-w-4xl mx-auto">
+                <i data-feather="zap" class="w-16 h-16 text-yellow-400 mx-auto mb-6"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Projects Coming Soon!</h2>
+                <p class="text-gray-300 mb-8">I'm currently working on some exciting projects in the field of AI and Data Science. Stay tuned as I'll be showcasing my work here soon!</p>
+                <div class="w-full bg-gray-800 rounded-full h-2.5 mb-6">
+                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2.5 rounded-full" style="width: 45%"></div>
+                </div>
+                <p class="text-gray-400 text-sm">Progress: 45%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto">Feel free to reach out for collaborations or just to say hello!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="glass-card rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i data-feather="mail" class="text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-400">paramveer.singh@example.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i data-feather="map-pin" class="text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Location</h4>
+                                    <p class="text-gray-400">Punjab, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-900/30 flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i data-feather="calendar" class="text-indigo-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Availability</h4>
+                                    <p class="text-gray-400">Open to collaborations and opportunities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12">
+                            <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-900/30 transition">
+                                    <i data-feather="github" class="text-gray-300"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-900/30 transition">
+                                    <i data-feather="linkedin" class="text-gray-300"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-900/30 transition">
+                                    <i data-feather="twitter" class="text-gray-300"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-900/30 transition">
+                                    <i data-feather="instagram" class="text-gray-300"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="glass-card rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" placeholder="Enter subject">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg font-medium hover:opacity-90 transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">AI Explorer</span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    © 2023 All Rights Reserved
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-indigo-400 transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animations with scroll-up detection
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+
+        // Add scroll direction detection for smarter animations
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop){
+                // Downscroll code
+                document.body.setAttribute('data-scroll-direction', 'down');
+            } else {
+                // Upscroll code
+                document.body.setAttribute('data-scroll-direction', 'up');
+                // Trigger animations on scroll up
+                const elements = document.querySelectorAll('[data-aos]');
+                elements.forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                        el.classList.add('aos-animate');
+                    }
+                });
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+
+        // Animate skill pills on hover
+        const skillPills = document.querySelectorAll('.skill-pill');
+        skillPills.forEach(pill => {
+            pill.addEventListener('mouseenter', () => {
+                anime({
+                    targets: pill,
+                    scale: 1.05,
+                    duration: 200,
+                    easing: 'easeOutQuad'
+                });
+            });
+            
+            pill.addEventListener('mouseleave', () => {
+                anime({
+                    targets: pill,
+                    scale: 1,
+                    duration: 200,
+                    easing: 'easeOutQuad'
+                });
+            });
+        });
+
+        // Floating animation for hero image with scroll direction awareness
+        const floatingEl = document.querySelector('.floating');
+        let floatingAnim = anime({
+            targets: floatingEl,
+            translateY: ['0px', '-15px'],
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInOutSine',
+            duration: 3000,
+            autoplay: true
+        });
+
+        window.addEventListener('scroll', function() {
+            const scrollDir = document.body.getAttribute('data-scroll-direction');
+            if (scrollDir === 'up') {
+                floatingAnim.reverse();
+                floatingAnim.play();
+            } else {
+                floatingAnim.play();
+            }
+        });
+
+        // Replace feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
